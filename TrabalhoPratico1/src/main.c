@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-bool canPlaceFlowers(int* flowerbed, int flowerbedSize, int n) {
+bool canPlaceFlowers( int* flowerbed, int flowerbedSize, int n ) {
     
     if ( n == 0 ){
         return true;
@@ -55,7 +55,7 @@ bool canPlaceFlowers(int* flowerbed, int flowerbedSize, int n) {
         for ( i = 1; i < flowerbedSize - 1; i++ ) {
 
             if ( flowerbed[i] == 0 ) {
-                if (flowerbed[i - 1] == 0 && flowerbed[i + 1] == 0) {
+                if ( flowerbed[i - 1] == 0 && flowerbed[i + 1] == 0 ) {
                     flowerbed[i] = 1;
                     livre++;
                     if (livre == n)
@@ -68,7 +68,7 @@ bool canPlaceFlowers(int* flowerbed, int flowerbedSize, int n) {
 }
 
 
-int main ()
+int main ( )
 {
 
     int flowerbedSize = 5;
