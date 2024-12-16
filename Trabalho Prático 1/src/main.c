@@ -68,9 +68,8 @@ bool canPlaceFlowers(int* flowerbed, int flowerbedSize, int n) {
 }
 
 
-int main ()
+int main () 
 {
-    //int* flowerbed, int flowerbedSize, int n
 
     int flowerbedSize = 5;
     int flowerbed[] = {1,0,0,0,1};
