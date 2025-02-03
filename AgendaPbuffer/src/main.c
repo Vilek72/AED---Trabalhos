@@ -42,12 +42,12 @@ void RemoverContato( ) {
 
     // Cria um buffer temporário para percorrer a lista
     char *temp = buffer + sizeof( int );
+    //percorre a lista
     while ( temp < buffer + sizeof( int ) + ( *numPessoas ) * PESSOA_SIZE ) {
         if ( strcmp( temp, nomeRemover ) == 0 ) {
-            char *temp2 = temp;
-            while ( temp2 < buffer + sizeof( int ) + ( *numPessoas - 1 ) * PESSOA_SIZE ) {
-                memcpy( temp2, temp2 + PESSOA_SIZE, PESSOA_SIZE );
-                temp2 += PESSOA_SIZE;
+            while ( temp < buffer + sizeof( int ) + ( *numPessoas - 1 ) * PESSOA_SIZE ) {
+                memcpy( temp, temp + PESSOA_SIZE, PESSOA_SIZE );
+                temp += PESSOA_SIZE;
             }
             ( *numPessoas )--;
             printf( "Pessoa removida com sucesso!\n" );
@@ -98,7 +98,7 @@ void ListarContato( ) {
 
 int main( ) {
     // Aloca o buffer de memória
-    pBuffer = malloc( sizeof(int) + MAX_PESSOAS * PESSOA_SIZE );
+    pBuffer = malloc( sizeof(int)* MAX_PESSOAS * PESSOA_SIZE );
     if ( pBuffer == NULL ) {
         printf("Erro ao alocar memória!\n");
         return 0;
