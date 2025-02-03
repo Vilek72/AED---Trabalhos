@@ -1,0 +1,114 @@
+Dr. Memory version 2.6.0 build 0 built on Sep 21 2023 17:48:48
+Windows version: WinVer=105;Rel=2009;Build=22631;Edition=Enterprise
+Dr. Memory results for pid 19920: "main.exe"
+Application cmdline: ""C:\Users\P.Vinicius\Desktop\Faculdade\AED I\AgendaPbuffer\src\main.exe""
+Recorded 124 suppression(s) from default C:\Program Files (x86)\Dr. Memory\bin\suppress-default.txt
+
+Error #1: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!FindNextFileW      +0x20e    (0x756b96fe <KERNELBASE.dll+0x1296fe>)
+# 1 KERNELBASE.dll!FindNextFileA      +0x33     (0x757afa24 <KERNELBASE.dll+0x21fa24>)
+# 2 .text                              [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+# 3 __mingw_glob                       [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+# 4 _setargv                           [C:/Users/P.Vinicius/Desktop/Faculdade/AED I/AgendaPbuffer/src/main.c:137]
+# 5 .text   
+# 6 mainCRTStartup
+# 7 ntdll.dll!__RtlUserThreadStart
+Note: @0:00:00.181 in thread 21424
+Note: instruction: cmp    %eax $0x0000001a
+
+Error #2: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!FindNextFileW      +0x23b    (0x756b972b <KERNELBASE.dll+0x12972b>)
+# 1 KERNELBASE.dll!FindNextFileA      +0x33     (0x757afa24 <KERNELBASE.dll+0x21fa24>)
+# 2 .text                              [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+# 3 __mingw_glob                       [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+# 4 _setargv                           [C:/Users/P.Vinicius/Desktop/Faculdade/AED I/AgendaPbuffer/src/main.c:137]
+# 5 .text   
+# 6 mainCRTStartup
+# 7 ntdll.dll!__RtlUserThreadStart
+Note: @0:00:00.182 in thread 21424
+Note: instruction: data16 mov    %cx -> 0x00000234(%ebx,%eax,2)
+
+Error #3: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!FindNextFileW      +0x167    (0x756b9657 <KERNELBASE.dll+0x129657>)
+# 1 KERNELBASE.dll!FindNextFileA      +0x33     (0x757afa24 <KERNELBASE.dll+0x21fa24>)
+# 2 .text                              [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+# 3 __mingw_glob                       [../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:184]
+# 4 _setargv                           [C:/Users/P.Vinicius/Desktop/Faculdade/AED I/AgendaPbuffer/src/main.c:137]
+# 5 .text   
+# 6 mainCRTStartup
+# 7 ntdll.dll!__RtlUserThreadStart
+Note: @0:00:00.187 in thread 21424
+Note: instruction: test   %eax %eax
+
+Error #4: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x0130378c-0x01303790 4 byte(s)
+# 0 main               [C:/Users/P.Vinicius/Desktop/Faculdade/AED I/AgendaPbuffer/src/main.c:114]
+Note: @0:00:00.214 in thread 21424
+Note: instruction: mov    (%eax) -> %eax
+
+Error #5: UNADDRESSABLE ACCESS beyond heap bounds: writing 0x0130378c-0x01303790 4 byte(s)
+# 0 msvcrt.dll!_input_l  
+# 1 msvcrt.dll!vscanf    
+# 2 msvcrt.dll!scanf     
+# 3 main                   [C:/Users/P.Vinicius/Desktop/Faculdade/AED I/AgendaPbuffer/src/main.c:122]
+Note: @0:00:04.802 in thread 21424
+Note: next higher malloc: 0x013037b0-0x013047b0
+Note: instruction: mov    %eax -> (%ecx)
+
+Error #6: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x0130378c-0x01303790 4 byte(s)
+# 0 main               [C:/Users/P.Vinicius/Desktop/Faculdade/AED I/AgendaPbuffer/src/main.c:124]
+Note: @0:00:04.803 in thread 21424
+Note: next higher malloc: 0x013037b0-0x013047b0
+Note: instruction: mov    (%eax) -> %eax
+
+Error #7: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x0130378c-0x01303790 4 byte(s)
+# 0 main               [C:/Users/P.Vinicius/Desktop/Faculdade/AED I/AgendaPbuffer/src/main.c:125]
+Note: @0:00:36.682 in thread 21424
+Note: next higher malloc: 0x013037b0-0x013047b0
+Note: instruction: mov    (%eax) -> %eax
+
+Error #8: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x0130378c-0x01303790 4 byte(s)
+# 0 main               [C:/Users/P.Vinicius/Desktop/Faculdade/AED I/AgendaPbuffer/src/main.c:126]
+Note: @0:00:36.683 in thread 21424
+Note: next higher malloc: 0x013037b0-0x013047b0
+Note: instruction: mov    (%eax) -> %eax
+
+Error #9: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x0130378c-0x01303790 4 byte(s)
+# 0 main               [C:/Users/P.Vinicius/Desktop/Faculdade/AED I/AgendaPbuffer/src/main.c:127]
+Note: @0:00:36.683 in thread 21424
+Note: next higher malloc: 0x013037b0-0x013047b0
+Note: instruction: mov    (%eax) -> %eax
+
+Error #10: UNADDRESSABLE ACCESS beyond heap bounds: reading 0x0130378c-0x01303790 4 byte(s)
+# 0 main               [C:/Users/P.Vinicius/Desktop/Faculdade/AED I/AgendaPbuffer/src/main.c:128]
+Note: @0:01:22.386 in thread 21424
+Note: next higher malloc: 0x013037b0-0x013047b0
+Note: instruction: mov    (%eax) -> %eax
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+	Error #   1:      6
+	Error #   2:      6
+	Error #   4:     11
+	Error #   5:     11
+	Error #   6:     11
+	Error #   7:      7
+	Error #   8:      5
+	Error #   9:      4
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      7 unique,    50 total unaddressable access(es)
+      3 unique,    13 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      0 unique,     0 total,      0 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      6 unique,     6 total,   4461 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: C:\Users\P.Vinicius\AppData\Roaming\Dr. Memory\DrMemory-main.exe.19920.000\results.txt
